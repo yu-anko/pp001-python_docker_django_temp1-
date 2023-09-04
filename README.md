@@ -6,6 +6,21 @@
 docker-compose run web django-admin startproject myproject .
 ```
 
+## DBを以下の様に変更
+myproject/settings.py
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+
+```
 
 ## create docker image
     
